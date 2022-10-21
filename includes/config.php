@@ -66,7 +66,7 @@ function createUser($email, $password)
 
 
 /* ====================================================== */
-/* Get Head function */
+/* Función Get Head (obtención de la cabeza) */
 /* ====================================================== */
 
 function getHead()
@@ -110,7 +110,7 @@ function getHeader()
 
 
 /* ====================================================== */
-/* Text Limit function */
+/* Función de límite de texto */
 /* ====================================================== */
 
 function textLimit($string, $limit)
@@ -125,7 +125,7 @@ function textLimit($string, $limit)
 
 
 /* ====================================================== */
-/* Get Todo function */
+/* Obtener la función tarea */
 /* ====================================================== */
 
 function getTodo($todo)
@@ -150,7 +150,7 @@ function getTodo($todo)
 
 
 /* ====================================================== */
-/* Dynamic Title function */
+/* Función de título dinámico */
 /* ====================================================== */
 
 function dynamicTitle()

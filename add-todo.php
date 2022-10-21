@@ -44,15 +44,16 @@ if (isset($_POST["addTodo"])) {
 
 <head>
     <?php getHead(); ?>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body class="bg-light">
     <?php getHeader(); ?>
 
-    <div class="container py-5">
+    <div class="container py-7">
         <div class="row">
             <div class="col-md-5 mx-auto">
-                <div class="card bg-white rounded border shadow">
+                <div class="card bg-blue rounded border shadow">
                     <div class="card-header px-4 py-3">
                         <h4 class="card-title">AÑADIR TRABAJO</h4>
                     </div>
@@ -61,7 +62,7 @@ if (isset($_POST["addTodo"])) {
                         <form action="" method="POST">
                             <div class="mb-3">
                                 <label for="title" class="form-label">Titulo de la tarea</label>
-                                <input type="text" class="form-control" id="title" name="title" placeholder="e.g. Create a PHP program" value="<?php if (isset($_POST["addTodo"])) {
+                                <input type="text" class="form-control" id="title" name="title" placeholder="Ingresa el titulo de tu tarea" value="<?php if (isset($_POST["addTodo"])) {
                                                                                                                                                     echo $_POST["title"];
                                                                                                                                                 } ?>" required>
                             </div>
@@ -73,7 +74,7 @@ if (isset($_POST["addTodo"])) {
                             </div>
                             <div>
                                 <button type="submit" name="addTodo" class="btn btn-primary me-2">AÑADIR TAREA</button>
-                                <button type="reset" class="btn btn-danger">REINICIAR</button>
+                                <button type="reset" class="btn btn-danger">LIMPIAR</button>
                             </div>
                         </form>
                     </div>

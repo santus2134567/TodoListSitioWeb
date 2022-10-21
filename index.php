@@ -13,14 +13,18 @@ if (isset($_SESSION["user_email"])) {
 
 <head>
     <?php getHead(); ?>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body>
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">
         <div class="row align-items-center g-lg-5 py-5">
             <div class="col-lg-7 text-center text-lg-start">
-                <h1 class="display-4 fw-bold lh-1 mb-3">TODO LIST</h1>
-                <p class="col-lg-10 fs-4">ORGANIZA TUS TAREAS PENDIENTES </p>
+                <center>
+                    <h1 class="display-4 fw-bold lh-1 mb-3">TODO LIST</h1>
+                    <p class="col-lg-10 fs-4">ORGANIZA TUS TAREAS PENDIENTES </p>
+                    <img src="img/utea.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+                </center>
             </div>
             <div class="col-md-10 mx-auto col-lg-5">
                 <form action="login.php" method="POST" class="p-4 p-md-5 border rounded-3 bg-light">

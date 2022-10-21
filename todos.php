@@ -7,13 +7,12 @@ if (!isset($_SESSION["user_email"])) {
 }
 
 ?>
-
-
 <!doctype html>
 <html lang="en">
 
 <head>
     <?php getHead(); ?>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body>
@@ -21,7 +20,7 @@ if (!isset($_SESSION["user_email"])) {
     <div class="container">
         <h1 class="mb-4 text-center fw-bold">TU LISTA DE TRABAJOS</h1>
         <div class="row">
-            <?php 
+            <?php
             // Obtener el ID de usuario basado en el correo electrónico del usuario
             $sql = "SELECT id FROM users WHERE email='{$_SESSION["user_email"]}'";
             $res = mysqli_query($conn, $sql);
@@ -37,10 +36,13 @@ if (!isset($_SESSION["user_email"])) {
             if (mysqli_num_rows($res1) > 0) {
                 foreach ($res1 as $todo) {
             ?>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <?php getTodo($todo); ?>
-            </div>
-            <?php } } else { echo "<h1 class='text-danger text-center fw-bold'>Todos are not available!</h1>"; } ?>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <?php getTodo($todo); ?>
+                    </div>
+            <?php }
+            } else {
+                echo "<h1 class='text-danger text-center fw-bold'>AGREGA UN TRABAJO PENDIENTE !!! </h1>";
+            } ?>
         </div>
     </div>
 
