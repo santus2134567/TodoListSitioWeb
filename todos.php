@@ -19,10 +19,10 @@ if (!isset($_SESSION["user_email"])) {
 <body>
     <?php getHeader(); ?>
     <div class="container">
-        <h1 class="mb-4 text-center fw-bold">Your Todos</h1>
+        <h1 class="mb-4 text-center fw-bold">TU LISTA DE TRABAJOS</h1>
         <div class="row">
             <?php 
-            // Get User Id based on user email
+            // Obtener el ID de usuario basado en el correo electrónico del usuario
             $sql = "SELECT id FROM users WHERE email='{$_SESSION["user_email"]}'";
             $res = mysqli_query($conn, $sql);
             $count = mysqli_num_rows($res);

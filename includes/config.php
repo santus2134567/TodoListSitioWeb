@@ -1,7 +1,7 @@
 <?php
 
 /* ====================================================== */
-/* Database connection function */
+/* Función de conexión a la base de datos */
 /* ====================================================== */
 function dbConnect()
 {
@@ -10,14 +10,14 @@ function dbConnect()
     $password = "";
     $database = "todo_list";
 
-    $conn = mysqli_connect($hostname, $username, $password, $database) or die("Database connection failed.");
+    $conn = mysqli_connect($hostname, $username, $password, $database) or die("Error en la coneccion ala base de datos");
     return $conn;
 }
 
 $conn = dbConnect();
 
 /* ====================================================== */
-/* Check email is valid or not function */
+/* funcion para validar el usuario email */
 /* ====================================================== */
 
 function emailIsValid($email)
@@ -35,7 +35,7 @@ function emailIsValid($email)
 
 
 /* ====================================================== */
-/* Check login details is valid or not function */
+/* Función de comprobar si los datos de acceso son válidos o no */
 /* ====================================================== */
 
 function checkLoginDetails($email, $password)
@@ -53,7 +53,7 @@ function checkLoginDetails($email, $password)
 
 
 /* ====================================================== */
-/* Create user function */
+/* Crear función de usuario */
 /* ====================================================== */
 
 function createUser($email, $password)
@@ -86,7 +86,7 @@ function getHead()
 
 
 /* ====================================================== */
-/* Get Header function */
+/* Función "Get Header" (obtener la cabecera) */
 /* ====================================================== */
 
 function getHeader()
@@ -94,13 +94,13 @@ function getHeader()
     $output = '<header class="py-3 mb-4 border-bottom bg-white">
         <div class="d-flex flex-wrap justify-content-center container">
             <a href="todos.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                <span class="fs-4">Todo List</span>
+                <span class="fs-4"><H1>TODO LIST</H1></span>
             </a>
 
             <ul class="nav nav-pills">
-                <li class="nav-item"><a href="todos.php" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="add-todo.php" class="nav-link text-dark">Add Todo</a></li>
-                <li class="nav-item"><a href="logout.php" class="nav-link bg-danger text-white">Logout</a></li>
+                <li class="nav-item"><a href="todos.php" class="nav-link active" aria-current="page">INICIO</a></li>
+                <li class="nav-item"><a href="add-todo.php" class="nav-link text-dark">AÑADIR TAREA </a></li>
+                <li class="nav-item"><a href="logout.php" class="nav-link bg-danger text-white">CERRAR SESION</a></li>
             </ul>
         </div>
     </header>';

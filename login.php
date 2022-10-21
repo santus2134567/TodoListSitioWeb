@@ -18,7 +18,7 @@ if (isset($_POST["submit"])) {
             header("Location: todos.php");
             die();
         } else {
-            echo "<script>alert('Login details is invalid.');window.location.replace('index.php');</script>";
+            echo "<script>alert('Los datos de acceso no son válidos.');window.location.replace('index.php');</script>";
         }
     } else {
         $user_registration = createUser($email, $password);
@@ -27,7 +27,7 @@ if (isset($_POST["submit"])) {
             header("Location: todos.php");
             die();
         } else {
-            echo "User registration failed. Please try again later.";
+            echo "El registro del usuario ha fallado. Por favor, inténtelo más tarde.";
             die();
         }
     }
