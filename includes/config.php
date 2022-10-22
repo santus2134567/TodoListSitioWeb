@@ -136,8 +136,8 @@ function getTodo($todo)
             <p class="card-text">'. textLimit($todo['description'], 75) .'</p>
             <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                    <a href="view-todo.php?id='. $todo['id'] .'" class="btn btn-sm btn-outline-secondary">View</a>
-                    <a href="edit-todo.php?id='. $todo['id'] .'" class="btn btn-sm btn-outline-secondary">Edit</a>
+                    <a href="view-todo.php?id='. $todo['id'] .'" class="btn btn-sm btn-outline-secondary">Ver tarea</a>
+                    <a href="edit-todo.php?id='. $todo['id'] .'" class="btn btn-sm btn-outline-secondary">Editar Tarea</a>
                 </div>
                 <small class="text-muted">'. $todo['date'] .'</small>
             </div>
@@ -172,7 +172,7 @@ function dynamicTitle()
             break;
 
         case 'edit-todo.php':
-            $pageTitle = "Edit Todo";
+            $pageTitle = "Editar la Tarea";
             break;
 
         case 'view-todo.php':

@@ -42,7 +42,7 @@ if (isset($_POST["addTodo"])) {
 <!doctype html>
 <html lang="en">
 
-<head>
+<head>   
     <?php getHead(); ?>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
