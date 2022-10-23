@@ -1,3 +1,4 @@
+
 <?php
 
 /* ====================================================== */
@@ -91,7 +92,7 @@ function getHead()
 
 function getHeader()
 {
-    $output = '<header class="py-3 mb-4 border-bottom bg-white">
+    $output = '<header class="py-3 mb-4 border-bottom bg-light">
         <div class="d-flex flex-wrap justify-content-center container">
             <a href="todos.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                 <span class="fs-4"><H1>TODO LIST</H1></span>
@@ -130,9 +131,9 @@ function textLimit($string, $limit)
 
 function getTodo($todo)
 {
-    $output = '<div class="card shadow-sm">
+    $output = '<div class="card shadow-sm bg-light">
         <div class="card-body">
-            <h4 class="card-title">'. textLimit($todo['title'], 28) .'</h4>
+            <h4 class="card-title bg-light">'. textLimit($todo['title'], 28) .'</h4>
             <p class="card-text">'. textLimit($todo['description'], 75) .'</p>
             <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
@@ -193,3 +194,4 @@ function dynamicTitle()
 
     return $pageTitle;
 }
+?>

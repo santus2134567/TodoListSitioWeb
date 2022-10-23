@@ -24,9 +24,9 @@ if (isset($_POST["updateTodo"])) {
     if ($res) {
         $_POST["title"] = "";
         $_POST["desc"] = "";
-        $msg = "<div class='alert alert-success'>Todo is updated.</div>";
+        $msg = "<div class='alert alert-success'>Tarea fue actualizada</div>";
     } else {
-        $msg = "<div class='alert alert-danger'>Todo is not updated.</div>";
+        $msg = "<div class='alert alert-danger'>Tarea no fue actualizada</div>";
     }
 }
 
@@ -56,6 +56,7 @@ if (mysqli_num_rows($res) > 0) {
 
 <head>
     <?php getHead(); ?>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body class="bg-light">
@@ -64,7 +65,7 @@ if (mysqli_num_rows($res) > 0) {
     <div class="container py-5">
         <div class="row">
             <div class="col-md-5 mx-auto">
-                <div class="card bg-white rounded border shadow">
+                <div class="card bg-dark rounded border shadow">
                     <div class="card-header px-4 py-3">
                         <h4 class="card-title">Editar Tarea</h4>
                     </div>
@@ -73,7 +74,7 @@ if (mysqli_num_rows($res) > 0) {
                         <form action="" method="POST">
                             <div class="mb-3">
                                 <label for="title" class="form-label">Titulo</label>
-                                <input type="text" class="form-control" id="title" name="title" placeholder="e.g. Create a PHP program" value="<?php echo $todoData['title']; ?>" required>
+                                <input type="text" class="form-control" id="title" name="title" placeholder="ingresa el titulo de tu trabajo " value="<?php echo $todoData['title']; ?>" required>
                             </div>
                             <div class="mb-3">
                                 <label for="desc" class="form-label">Descripcion</label>
@@ -90,8 +91,6 @@ if (mysqli_num_rows($res) > 0) {
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 
 </html>

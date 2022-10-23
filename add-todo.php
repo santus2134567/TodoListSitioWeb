@@ -53,7 +53,7 @@ if (isset($_POST["addTodo"])) {
     <div class="container py-7">
         <div class="row">
             <div class="col-md-5 mx-auto">
-                <div class="card bg-blue rounded border shadow">
+                <div class="card bg-dark rounded border shadow">
                     <div class="card-header px-4 py-3">
                         <h4 class="card-title">AÑADIR TRABAJO</h4>
                     </div>
@@ -82,8 +82,6 @@ if (isset($_POST["addTodo"])) {
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 
 </html>

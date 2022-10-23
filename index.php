@@ -29,7 +29,7 @@ if (isset($_SESSION["user_email"])) {
             <div class="col-md-10 mx-auto col-lg-5">
                 <form action="login.php" method="POST" class="p-4 p-md-5 border rounded-3 bg-light">
                     <div class="form-floating mb-3">
-                        <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <input type="email" name="email" class="form-control " id="floatingInput" placeholder="usuario@ejemplo.com">
                         <label for="floatingInput">Usuario</label>
                     </div>
                     <div class="form-floating mb-3">
@@ -42,8 +42,6 @@ if (isset($_SESSION["user_email"])) {
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 
 </html>

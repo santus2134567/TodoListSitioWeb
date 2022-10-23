@@ -7,6 +7,8 @@ if (!isset($_SESSION["user_email"])) {
 }
 
 ?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -18,10 +20,10 @@ if (!isset($_SESSION["user_email"])) {
 <body>
     <?php getHeader(); ?>
     <div class="container">
-        <h1 class="mb-4 text-center fw-bold">TU LISTA DE TRABAJOS</h1>
         <div class="row">
             <?php
-            // Obtener el ID de usuario basado en el correo electrónico del usuario
+            $todoId = mysqli_real_escape_string($conn, $_GET["id"]);
+            // Get User Id based on user email
             $sql = "SELECT id FROM users WHERE email='{$_SESSION["user_email"]}'";
             $res = mysqli_query($conn, $sql);
             $count = mysqli_num_rows($res);
@@ -31,17 +33,24 @@ if (!isset($_SESSION["user_email"])) {
             } else {
                 $user_id = 0;
             }
-            $sql1 = "SELECT * FROM todos WHERE user_id='{$user_id}' ORDER BY id DESC";
+            $sql1 = "SELECT * FROM todos WHERE id='{$todoId}' AND user_id='{$user_id}'";
             $res1 = mysqli_query($conn, $sql1);
             if (mysqli_num_rows($res1) > 0) {
                 foreach ($res1 as $todo) {
             ?>
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <?php getTodo($todo); ?>
-                    </div>
+                    <main>
+                        <h1><?php echo $todo["title"]; ?></h1>
+                        <p class="fs-5 col-md-8"><?php echo $todo["description"]; ?></p>
+
+                        <div class="mb-5">
+                            <a href="<?php echo 'edit-todo.php?id='. $todo['id']; ?>" class="btn btn-primary btn-lg px-4 me-2">Editar </a>
+                            <a href="<?php echo 'delete-todo.php?id='. $todo['id']; ?>" class="btn btn-danger btn-lg px-4">Eliminar Tarea</a>
+                        </div>
+                    </main>
             <?php }
             } else {
-                echo "<h1 class='text-danger text-center fw-bold'>AGREGA UN TRABAJO PENDIENTE !!! </h1>";
+                header("Location: todos.php");
+                die();
             } ?>
         </div>
     </div>
